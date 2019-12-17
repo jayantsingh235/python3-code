@@ -1,3 +1,10 @@
+'''
+This is a very simple utility to create ssh sessions and do SCP from one system to another.
+To create a ssh client, create an object of sshClient type and pass the required information
+For scp, appropriate filename and its path would be required.
+    The getscp command will always download from remote machine to a local directory
+'''
+
 import paramiko
 from scp import SCPClient
 
