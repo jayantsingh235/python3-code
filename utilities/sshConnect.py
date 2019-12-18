@@ -31,7 +31,7 @@ class sshClient ():
         return output if output else stderr.read().decode('ascii')    # bytes into unicode
 
 
-    def ScpGetTransport(self, filename):
+    def scpGetRemoteFile(self, filename):
         if not self.sshConnStatus:
             print ('SSH connection not established, no SCP possible')
             return
@@ -39,7 +39,7 @@ class sshClient ():
         mscp.get(filename)
 
 
-    def ScpPutTransport(self, filename, filepath):
+    def scpSendFile(self, filename, filepath):
         if not self.sshConnStatus:
             print ('SSH connection not established, no SCP possible')
             return
